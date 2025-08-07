@@ -1,6 +1,8 @@
-const { use } = require("react");
+// const myModule = require('myModule');
+// import myModule from './myModule.js';
+// const { use } = require("react");
 
-const randomNumber = parseInt(Math.random() * 100 + 1)
+let randomNumber = parseInt(Math.random() * 100 + 1)
 
 const userInput = document.querySelector('#guessField');
 const submit = document.querySelector('#subt');
@@ -27,17 +29,18 @@ if(playGame){
 
 function validation(guess){
     if(isNaN(guess) || guess < 1  || guess > 100){
-        console.log('Please Enter a valid number between 1 to 100');
+        displayMessage('Please Enter a valid number between 1 to 100');
         
     }else{
         prevGuess.push(guess);
-        if(guess === 10){
+        if(numGuess === 10){
             cleanDisplayGuess(guess);
             displayMessage(`Game is over. The random number is ${randomNumber}`);
             endGame();
         }else{
             cleanDisplayGuess(guess);
             checkGuess(guess);
+            // endGame();
         }
     }
 }
@@ -57,7 +60,7 @@ function cleanDisplayGuess(guess){
     userInput.value = '';
     guessSlot.innerHTML += `${guess}: `;
     numGuess++;
-    remaining.innerHTML = `${11 - numGuess}`
+    remaining.innerHTML = `${10 - numGuess}`
 }
 
 function displayMessage(message){
@@ -75,8 +78,8 @@ function endGame(){
 }
 
 function startGame(){
-     const newGameButton = document.querySelector('#newGame');
-  newGameButton.addEventListener('click', function (e) {
+    let newGameButton = document.querySelector('#newGame');
+    newGameButton.addEventListener('click', function (e) {
     randomNumber = parseInt(Math.random() * 100 + 1);
     prevGuess = [];
     numGuess = 1;
