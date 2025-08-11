@@ -14,3 +14,13 @@
         }
 
         list.forEach( (item, indx) => console.log(item, indx))
+
+
+/*Who has created the DOM standard?
+Microsoft
+Apple
+W3C  //answer W3C (World Wide Web Consortium)
+
+With the HTML Dom, you can use JavaScript to access HTML elements.
+True  //answer
+False*/
