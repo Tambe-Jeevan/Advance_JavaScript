@@ -1,4 +1,4 @@
-console.log("Start");
+console.log("Start_");
 
 function getData(callback) {
     setTimeout(() => {
@@ -11,4 +11,4 @@ getData(() => {
     console.log("Processing data...");
 });
 
-console.log("End");
+console.log("End_");
