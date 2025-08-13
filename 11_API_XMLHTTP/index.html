@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+<div>
+<table border="1">
+  <caption>XMLHttpRequest readyState Values</caption>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>State</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>UNSENT</td>
+      <td>Client has been created. <code>open()</code> not called yet.</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>OPENED</td>
+      <td><code>open()</code> has been called.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>HEADERS_RECEIVED</td>
+      <td><code>send()</code> has been called, and headers and status are available.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>LOADING</td>
+      <td>Downloading; <code>responseText</code> holds partial data.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>DONE</td>
+      <td>The operation is complete.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div>
+<img style="height: 200px;" alt="Img">
+<h3 id="name"></h3>
+<h3 id="followers"></h3>
+<h3 id="following"></h3>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
